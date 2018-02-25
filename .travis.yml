@@ -1,0 +1,12 @@
+language: c
+dist: trusty
+sudo: true
+compiler:
+  - gcc
+
+before install:
+  - sudo apt-get update
+  - sudo apt-get install gcc clang
+
+script:
+  - gcc -o main new.c && ./main
